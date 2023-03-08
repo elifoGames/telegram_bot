@@ -1,6 +1,8 @@
 import telebot
 import json
 import os
+import sys
+import time
 
 from telebot import types
 
@@ -150,4 +152,7 @@ def text(message):
         else:
             bot.send_message(message.chat.id, "You have been blocked.")
 
+def stop():
+    sys.exit()
+    
 bot.polling(none_stop=True)
